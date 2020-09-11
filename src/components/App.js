@@ -5,10 +5,24 @@ import Page1Component from './Page1Component';
 class App extends React.Component {
 
     render() {
-        return (<div className="container page1-component">
+
+        switch(window.location.pathname)
+
+        {
+            case "/page-2":
+                return (<div className="container page2-component">
+                <BarraNavegacion /> 
+                
+                </div>);
+                
+            default: 
+            return (<div className="container page1-component">
                 <BarraNavegacion /> 
                 <Page1Component />
             </div>);
+        }
+
+        
     };
 
 };
