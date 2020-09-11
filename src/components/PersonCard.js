@@ -1,4 +1,5 @@
-import React from 'react'
+import './PersonCard.css';
+import React from 'react';
 
 const PersonCard = (props) => {
     return (

@@ -1,3 +1,4 @@
+import './ReviewComponent.css';
 import React from 'react'
 import PersonCard from './PersonCard'
 

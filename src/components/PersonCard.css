@@ -1,0 +1,19 @@
+.person-card {
+/*    Roboto 32 black;*/
+    margin-left: 32px;
+    
+}
+
+.person-card .name { 
+    font-size: 32px;
+    color: black;
+    font-family: "Roboto";
+    line-height: 48px;
+}
+
+.person-card .position {
+    font-size: 14px;
+    color: #a5a5a5;
+    font-family: "Roboto";  
+    line-height: 16px;
+}

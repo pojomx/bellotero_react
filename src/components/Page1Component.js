@@ -1,3 +1,4 @@
+import './Page1Component.css';
 import React from 'react';
 import axios from 'axios';
 import ControlesComponent from './ControlesComponent';
@@ -18,14 +19,14 @@ class Page1Component extends React.Component {
     }
 
     onClickSiguiente = event => {
-        const siguiente = (this.state.testimonialActual == this.state.testimoniales -1)? 0 : this.state.testimonialActual + 1;
+        const siguiente = (this.state.testimonialActual === this.state.testimoniales -1)? 0 : this.state.testimonialActual + 1;
         this.setState({testimonialActual: siguiente});
 
     };
 
 
     onClickAnterior = event => {
-        const anterior = this.state.testimonialActual == 0 ?(this.state.testimoniales - 1):(this.state.testimonialActual - 1);
+        const anterior = this.state.testimonialActual === 0 ?(this.state.testimoniales - 1):(this.state.testimonialActual - 1);
         this.setState({testimonialActual: anterior});
     };
 

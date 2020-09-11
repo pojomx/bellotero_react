@@ -10,13 +10,13 @@ class App extends React.Component {
 
         {
             case "/page-2":
-                return (<div className="container page2-component">
+                return (<div className="container">
                 <BarraNavegacion /> 
                 
                 </div>);
                 
             default: 
-            return (<div className="container page1-component">
+            return (<div className="container">
                 <BarraNavegacion /> 
                 <Page1Component />
             </div>);
