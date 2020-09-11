@@ -1,5 +1,5 @@
 import React from 'react'
-import PersonCard from '../PersonCard'
+import PersonCard from './PersonCard'
 
 const ReviewComponent = (props) => {
     return (

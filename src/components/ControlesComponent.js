@@ -4,22 +4,20 @@ import React from 'react';
 
 const ControlesComponent = props => {
 
-    var actual = props.testimonialActual + 1;
-    var total = props.testimoniales;
-
+    
     return (
         <div className="controles-component">
             <div className=" texto boton doble">
-                {actual}/{total}
+                {props.testimonialActual + 1}/{props.testimoniales}
             </div>
-            <div className=" boton simple">
-                <i class="arrow left icon"></i>
+            <div className=" boton simple" onClick={props.onAnterior}>
+                <i className="arrow left icon"></i>
             </div>
-            <div className=" boton simple">
-                <i class="arrow right icon"></i>
+            <div className=" boton simple" onClick={props.onSiguiente}>
+                <i className="arrow right icon"></i>
             </div>
         </div>
-    ); 
+        );
 }
 
 export default ControlesComponent;

@@ -4,7 +4,7 @@ import ReviewComponent from './ReviewComponent';
 import SpinnerComponent from './SpinnerComponent';
 
 class Page1Component extends React.Component {
-    state = { datos : null, testimonialActual : 0};
+    state = { datos : null, testimonialActual : 0, testimoniales : 0};
 
     componentDidMount (props) {
         /*
@@ -26,26 +26,33 @@ class Page1Component extends React.Component {
             }
         };
 
-        this.setState({ datos: dataset});
+        this.setState({ datos: dataset, testimonialActual: 0, testimoniales: dataset.slider.reviews.length});
         
     }
-    /*
-    renderContent() {
-            //Se recomienda para tener un marco comun y aqui hacer la selección del contenido (ifs/etc) 
-    } */
+
+    onClickSiguiente = event => {
+        const siguiente = (this.state.testimonialActual == this.state.testimoniales -1)? 0 : this.state.testimonialActual + 1;
+        this.setState({testimonialActual: siguiente});
+
+    };
+
+
+    onClickAnterior = event => {
+        const anterior = this.state.testimonialActual == 0 ?(this.state.testimoniales - 1):(this.state.testimonialActual - 1);
+        this.setState({testimonialActual: anterior});
+    };
 
     render() {
         if(!this.state.datos) {    
             return <SpinnerComponent message="Obteniendo datos de internet" />
         }
-
         return (
             <div className="page1-component">  
                 <div className="row">
                     <h1>{this.state.datos.slider.title}</h1>
                 </div>
-                <ReviewComponent review = {this.state.datos.slider.reviews[0]} />
-                <ControlesComponent testimonialActual = {this.state.testimonialActual} testimoniales = {this.state.datos.slider.reviews.length}/>
+                <ReviewComponent review = {this.state.datos.slider.reviews[this.state.testimonialActual]} />
+                <ControlesComponent testimonialActual = {this.state.testimonialActual} testimoniales = {this.state.datos.slider.reviews.length} onSiguiente = {this.onClickSiguiente} onAnterior = {this.onClickAnterior}/>
             </div>
         ); 
     }
