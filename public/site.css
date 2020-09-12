@@ -44,9 +44,6 @@
     color: var(--cobalt-blue);
   }
 
-
-
-
   .bellotero {
     width: 133px;
     height: 26px;
@@ -71,13 +68,6 @@
     padding-right: 25px;
     padding-top:10px;
 }
-/*
-.menu-link:active, .menu-link:hover {
-    border-top: 2px solid #071eb3;
-}*/
-.row-spacer  {
-  height: auto;
-}
 
 h1 {
     background-color: #071eb3;
@@ -85,8 +75,9 @@ h1 {
     width: auto;
     text-align: center;
     line-height: 56px;
-    
+    font-size: 36px;
 }
-h1 {
-  font-size: 36px;
+
+.granaltura {
+  height: 100px;
 }

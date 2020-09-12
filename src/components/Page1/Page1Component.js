@@ -1,9 +1,9 @@
 import './Page1Component.css';
 import React from 'react';
-import axios from 'axios';
+import belloteroAPI from '../../api/belloteroAPI';
 import ControlesComponent from './ControlesComponent';
 import ReviewComponent from './ReviewComponent';
-import SpinnerComponent from './SpinnerComponent';
+import SpinnerComponent from '../SpinnerComponent';
 
 class Page1Component extends React.Component {
     state = { datos : null, testimonialActual : 0, testimoniales : 0};
@@ -12,7 +12,7 @@ class Page1Component extends React.Component {
         /*
         datos de aqui pero en did mount
         */ 
-       axios.get("https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/page1.json")
+       belloteroAPI.get("/master/page1.json")
         .then(response => {
             this.setState({ datos: response.data, testimonialActual: 0, testimoniales: response.data.slider.reviews.length});
         });                

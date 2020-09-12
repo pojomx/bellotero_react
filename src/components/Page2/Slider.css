@@ -1,0 +1,10 @@
+.slider{
+    width: 25px;
+    height: 25px;
+    outline: 5px solid ;
+    flex: 6;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    outline: none;
+}
