@@ -17,6 +17,7 @@
     line-height: 1.11;
     letter-spacing: 0.77px;
     color: var(--cobalt-blue);
+    margin-right: 10px;
 }
 
 .bigMoney {
@@ -33,4 +34,16 @@
 .overflow-extended {
     position: relative;
     width: 100%;
+}
+
+.DisplayComponent {
+    
+    text-align: right;
+    display: block;
+    float: right;
+    position: relative;
+    right: 0px;
+margin:auto;    
+    margin-left: 30px;
+    
 }
